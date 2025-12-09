@@ -1,0 +1,347 @@
+:root {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    sans-serif;
+  background-color: #020617;
+  color: #e5e7eb;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #020617;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* Layout general */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 16px 40px;
+}
+
+.app-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.app-sub {
+  font-size: 0.9rem;
+  color: #9ca3af;
+}
+
+/* Toolbar */
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 20px;
+  align-items: flex-end;
+  margin-top: 16px;
+  padding: 12px;
+  background: #020617;
+  border-radius: 10px;
+  border: 1px solid #1f2937;
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #d1d5db;
+  gap: 4px;
+}
+
+.label input,
+.label select {
+  padding: 6px 8px;
+  border-radius: 6px;
+  border: 1px solid #374151;
+  background: #020617;
+  color: #f9fafb;
+  font-size: 0.85rem;
+}
+
+.label input::placeholder {
+  color: #6b7280;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+  margin-left: auto;
+}
+
+/* Botones */
+.btn {
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid #374151;
+  background: #020617;
+  color: #e5e7eb;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.btn.primary {
+  background: #2563eb;
+  border-color: #1d4ed8;
+  color: #f9fafb;
+}
+
+.btn.warn {
+  background: #991b1b;
+  border-color: #7f1d1d;
+  color: #fee2e2;
+}
+
+.btn:hover {
+  filter: brightness(1.1);
+}
+
+/* Leyenda */
+.row.legend {
+  display: flex;
+  gap: 16px;
+  font-size: 0.8rem;
+  color: #d1d5db;
+}
+
+.dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  margin-right: 4px;
+}
+
+.dot.ser {
+  background: #22c55e;
+}
+
+.dot.pry {
+  background: #f97316;
+}
+
+.dot.idl {
+  background: #6b7280;
+}
+
+/* Timeline (regla de horas) */
+.timeline {
+  display: grid;
+  margin-top: 12px;
+  margin-bottom: 4px;
+  background: #0b1120;
+  border-radius: 6px;
+  border: 1px solid #1f2933;
+  overflow: hidden;
+}
+
+.tick {
+  position: relative;
+  height: 32px;
+  border-right: 1px dashed #374151;
+}
+
+.tick:last-child {
+  border-right: none;
+}
+
+.tick-lg {
+  background: rgba(15, 23, 42, 0.9);
+}
+
+.tick-label {
+  position: absolute;
+  top: 4px;
+  left: 6px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #e5e7eb;
+}
+
+/* Tarjetas / grillas */
+.card {
+  background: #020617;
+  border-radius: 10px;
+  border: 1px solid #1f2937;
+  padding: 8px 8px;
+  margin-top: 8px;
+}
+
+.time-grid {
+  display: grid;
+  gap: 1px;
+  background: #020617;
+}
+
+.slot {
+  height: 20px;
+  background: #020617;
+  border-right: 1px solid #0f172a;
+}
+
+/* Filas de técnicos */
+.tech-row {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 6px;
+  align-items: stretch;
+  margin-top: 6px;
+}
+
+.tech-title {
+  padding: 6px 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  background: #020617;
+  border-radius: 8px;
+  border: 1px solid #1f2937;
+  display: flex;
+  align-items: center;
+}
+
+/* Bloques de entrada */
+.entry {
+  position: relative;
+  padding: 2px 8px;
+  font-size: 0.75rem;
+  border-radius: 999px;
+  border-width: 1px;
+  border-style: solid;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  overflow: hidden;
+}
+
+.entry-actions {
+  margin-left: auto;
+  display: flex;
+  gap: 4px;
+}
+
+.chip {
+  border: none;
+  border-radius: 999px;
+  padding: 0 6px;
+  font-size: 0.7rem;
+  cursor: pointer;
+  background: rgba(15, 23, 42, 0.35);
+  color: #e5e7eb;
+}
+
+.chip:hover {
+  background: rgba(15, 23, 42, 0.7);
+}
+
+/* Hint */
+.hint {
+  font-size: 0.8rem;
+  color: #9ca3af;
+}
+
+/* ---------- Matriz mensual ---------- */
+.card.monthly-card,
+.card.monthly-list-card {
+  margin-top: 24px;
+}
+
+.section-title {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.monthly-table-wrapper {
+  overflow-x: auto;
+}
+
+.monthly-table {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 700px;
+  font-size: 12px;
+}
+
+.monthly-table th,
+.monthly-table td {
+  border: 1px solid #374151;
+  text-align: center;
+  padding: 4px 6px;
+}
+
+.monthly-table thead th {
+  position: sticky;
+  top: 0;
+  background: #111827;
+  z-index: 1;
+}
+
+.emp-cell {
+  text-align: left;
+  white-space: nowrap;
+  background: #020617;
+  font-weight: 600;
+}
+
+.day-cell.ok {
+  background: #15803d;
+  color: #f9fafb;
+}
+
+.day-cell.no-ok {
+  background: #b91c1c;
+  color: #f9fafb;
+}
+
+.monthly-legend {
+  display: flex;
+  gap: 16px;
+  margin-top: 8px;
+  font-size: 12px;
+}
+
+.legend-box {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+  margin-right: 4px;
+}
+
+.legend-box.ok {
+  background: #15803d;
+}
+
+.legend-box.no-ok {
+  background: #b91c1c;
+}
+
+/* Tabla detalle OS */
+.table-scroll {
+  overflow-x: auto;
+}
+
+.os-table {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 600px;
+  font-size: 12px;
+}
+
+.os-table th,
+.os-table td {
+  border: 1px solid #374151;
+  padding: 4px 6px;
+}
+
+.os-table thead th {
+  background: #111827;
+  position: sticky;
+  top: 0;
+}
